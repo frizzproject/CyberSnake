@@ -1,0 +1,73 @@
+/* ===== Dark theme ===== */
+html[data-theme="dark"]:root {
+    --bg-color: #353336;
+    --control-bg-color: #121214;
+    --record-color: #ffffff;
+
+    --game-bg-color: #161618;
+    --game-shadow-color: #161618;
+}
+/* ===== Light theme ===== */
+html[data-theme="light"]:root {
+    --bg-color: #161618;
+    --control-bg-color: #FFFFFF;
+    --record-color: #161618;
+
+    --game-bg-color: #FFFFFF;
+    --game-shadow-color: #4b4b4b;
+}
+
+/* ===== Red ===== */
+html[data-color="red"]:root {
+    --control-theme-color: #FA0556;
+
+    --snake-head-color: #FA0556;
+    --snake-body-color: #A00034;
+    --eat-color: #A00034;
+    --loos-color: #A00034;
+}
+/* ===== Red ===== */
+html[data-color="pink"]:root {
+    --control-theme-color: #FF709F;
+
+    --snake-head-color: #FF709F;
+    --snake-body-color: #FF578E;
+    --eat-color: #FF578E;
+    --loos-color: #FF578E;
+}
+/* ===== Purple ===== */
+html[data-color="purple"]:root {
+    --control-theme-color: #634F8E;
+
+    --snake-head-color: #634F8E;
+    --snake-body-color: #543F81;
+    --eat-color: #543F81;
+    --loos-color: #543F81;
+}
+/* ===== Green ===== */
+html[data-color="green"]:root {
+    --control-theme-color: #76E595;
+
+    --snake-head-color: #76E595;
+    --snake-body-color: #35D462;
+    --eat-color: #35D462;
+    --loos-color: #35D462;
+}
+/* ===== White ===== */
+html[data-color="white"]:root {
+    --control-theme-color: #acacac;
+
+    --snake-head-color: #acacac;
+    --snake-body-color: #e0e0e0;
+    --eat-color: #e0e0e0;
+    --loos-color: #e0e0e0;
+}
+/* ===== Yellow ===== */
+html[data-color="yellow"]:root {
+    --control-theme-color: #FEFFBF;
+
+    --snake-head-color: #FEFFBF;
+    --snake-body-color: #F2F562;
+    --eat-color: #F2F562;
+    --loos-color: #F2F562;
+}

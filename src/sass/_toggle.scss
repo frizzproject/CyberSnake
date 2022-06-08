@@ -1,0 +1,120 @@
+.toggle {
+    position: absolute;
+    border: 2px solid var(--control-bg-color);
+    border-radius: var(--br-radius);
+    -webkit-transition: border-color .6s ease-out;
+    transition: border-color .6s ease-out;
+    transition: opacity var(--transition);
+
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 40px;
+
+    z-index: 10;
+    opacity: .3;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.toggle.toggle-on {
+    border-color: var(--control-theme-color);
+    -webkit-transition: all var(--transition);
+    transition: all var(--transition);
+    opacity: 1;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 4px;
+    width: 28px;
+    bottom: 4px;
+    right: 39px;
+    background-color: var(--control-bg-color);
+    border-radius: var(--br-radius); 
+    -webkit-transition: all var(--transition) .1s, width .1s, top .1s, bottom .1s;
+    transition: all var(--transition) .1s, width .1s, top .1s, bottom .1s;
+}
+
+.toggle-on .toggle-button {
+    top: 3px;
+    width: 65px;
+    bottom: 3px;
+    right: 3px;
+    border-radius: var(--br-radius);
+    background-color: var(--control-theme-color);
+    box-shadow: 0 0 16px var(--control-theme-color);
+    -webkit-transition: all var(--transition) .1s, right .1s;
+    transition: all var(--transition) .1s, right .1s;
+}
+
+
+.toggle-text-on {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 36px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    -webkit-user-select: none; /* Chrome/Safari */    
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    color: rgba(0,0,0,0);
+}
+
+.toggle-on .toggle-text-on {
+    color: var(--control-bg-color);
+    letter-spacing: 0;
+    -webkit-transition: color .3s .15s ;
+    transition: color var(--transition) .15s ;
+}
+
+.toggle-text-off {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    line-height: 3.6rem;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    color: var(--control-theme-color);
+    letter-spacing: 0;
+}
+
+.toggle-on .toggle-text-off {
+    color: rgba(0,0,0,0);
+}
+
+/* used for streak effect */
+.glow-comp {
+    position: absolute;
+    opacity: 0;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 6px;
+    background-color: rgba(75, 122, 141, .1);
+    box-shadow: 0 0 12px rgba(75, 122, 141, .2);
+    -webkit-transition: opacity 4.5s 1s;
+    transition: opacity 4.5s 1s;
+}
+
+.toggle-on .glow-comp {
+    opacity: 1;
+    -webkit-transition: opacity var(--transition);
+    transition: opacity var(--transition);
+}

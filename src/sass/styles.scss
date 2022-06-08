@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* ===== Main ===== */
+@import "vars";
+@import "themes";
+
+/* ===== Base ===== */
+@import "base";
+
+/* ===== Blocks ===== */
+@import "preloader";
+@import "toggle";
+@import "game";
+@import "settings";
+@import "animation";

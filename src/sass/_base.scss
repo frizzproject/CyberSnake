@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 10px;
+	letter-spacing: 0.2rem;
+}
+
+html,
+body {
+	overflow: hidden;
+}
+
+body {
+	position: relative;
+	margin: 0px;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+	background-color: var(--bg-color);
+
+}
+
+button {
+	outline: none;
+	cursor: pointer;
+	background: none;
+}
+
+svg {
+	pointer-events: none;
+	transition: all var(--transition);
+}
+
+svg path {
+	transition: all var(--transition);
+}

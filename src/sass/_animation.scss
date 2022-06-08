@@ -1,0 +1,26 @@
+@keyframes blick {
+	from {
+		transform: translateX(-200%) skewX(-45deg);
+	}
+	to {
+		transform: translateX(500%) skewX(-45deg);
+	}
+}
+
+@keyframes rotateR {
+	from {
+		transform: rotate(0deg);
+	}	
+	to {
+		transform: rotate(360deg);
+	}	
+}
+
+@keyframes rotateL {
+	from {
+		transform: rotate(0deg);
+	}	
+	to {
+		transform: rotate(-360deg);
+	}	
+}
