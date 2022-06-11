@@ -1,7 +1,6 @@
 import Component from "./Component";
 import Config from "./Config";
 import Theme from "./Theme.js";
-import { css } from "./Utils.js";
 
 /* ===== Preloader ===== */
 export default class Fps extends Component {
@@ -21,14 +20,6 @@ export default class Fps extends Component {
         this.lastLoop = new Date();                        // Last point for fps
         this.loop;                                         // Curren point for fps
         this.fps;                                          // FPS
-
-        css(this.element, {
-            position: 'absolute',
-            top: 10 + 'px',
-            left: 10 + 'px',
-            fontSize: 1.8 + 'rem',
-            color: this.theme.controlThemeColor
-        });
 
         this.fpsCounter();
         

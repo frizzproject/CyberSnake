@@ -1,4 +1,4 @@
-import { css, getRandomInt } from "./Utils.js";
+import { css, getRandomInt, sleep } from "./Utils.js";
 import Config, { GAME_BEHAVIOR, gameBehaviorSwitch } from "./Config.js";
 import Theme from "./Theme.js";
 import Audio from "./Audio.js";

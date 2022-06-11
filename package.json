@@ -19,7 +19,7 @@
   "build": {
   "appId": "com.electron.cybersanke",
   "target": "nsis",
-  "icon": "dist/icon.png",
+  "icon": "dist/icon-256x256.png",
   "directories": {
     "output": "app"
   },

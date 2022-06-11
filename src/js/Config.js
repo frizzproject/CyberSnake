@@ -7,8 +7,8 @@ export default class Config {
 
     constructor() {
 
-		this.canvasWidth = 480;				// Width game canvas
-		this.canvasHeight = 480;			// Height game canvas
+		this.canvasWidth = 480;				// Width game canvas (w % this.sizeCell == 0)
+		this.canvasHeight = 480;			// Height game canvas (h % this.sizeCell == 0)
 		this.sleepKey = 50;					// Duration press key (50ms)
         this.step = 0;                      // Step
 	    this.maxStep = 6;                   // Max step - fps
