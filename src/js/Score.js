@@ -19,7 +19,7 @@ export default class Score {
     /* ===== Increment score ===== */
     incScore() {
         this.score++;
-        this.draw();
+        // this.draw();
     }
 
     /* ===== Reset score ===== */

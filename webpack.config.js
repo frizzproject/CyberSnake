@@ -34,9 +34,17 @@ module.exports = {
                     to: path.resolve(__dirname, 'dist')
                 },
                 {
-                    from: path.resolve(__dirname, 'src/assets/icon.png'), 
+                    from: path.resolve(__dirname, 'src/assets/icon-16x16.png'), 
                     to: path.resolve(__dirname, 'dist')
                 },
+                {
+                    from: path.resolve(__dirname, 'src/assets/icon-64x64.png'), 
+                    to: path.resolve(__dirname, 'dist')
+                },
+                {
+                    from: path.resolve(__dirname, 'src/assets/icon-256x256.png'), 
+                    to: path.resolve(__dirname, 'dist')
+                }
             ]
         }),
         new MiniCssExtarctPlugin({

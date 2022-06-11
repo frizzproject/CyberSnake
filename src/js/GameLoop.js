@@ -4,7 +4,7 @@ import Theme from "./Theme.js";
 /* ===== GameLoop ===== */
 export default class GameLoop {
 
-    constructor(update, render, canvas, controlStart) {
+    constructor(update, render, canvas) {
 
         this.config = new Config();
         this.theme = new Theme();
@@ -12,7 +12,7 @@ export default class GameLoop {
         this.update = update;
         this.render = render;
         this.canvas = canvas;
-        this.controlStart = controlStart;
+        // this.controlStart = controlStart;
 
         this.rAF;                                          // Request animation frame
         this.animate = this.animate.bind(this);  
@@ -26,15 +26,10 @@ export default class GameLoop {
     /* ===== Animation frame ===== */
     animate() {
 
-        // Fps counter
-        // this.controlFps.classList.contains('toggle-on') 
-        // ? this.fpsField.textContent = this.fpsCounter() 
-        // : this.fpsField.textContent = 0;
-        
         if (GAME_BEHAVIOR === 'START') {
             // IF SELECTED START GAME
             this.rAF = requestAnimationFrame(this.animate);
-            this.controlStart.textContent = 'PAUSE';
+            // this.controlStart.textContent = 'PAUSE';
         } else if (GAME_BEHAVIOR === 'PAUSE') {
             // IF SELECTED PAUSE GAME
             this.pause();
@@ -57,18 +52,18 @@ export default class GameLoop {
         gameBehaviorSwitch('PAUSE');
         cancelAnimationFrame(this.rAF);
         
-        this.controlStart.textContent = 'START';
+        // this.controlStart.textContent = 'START';
     }
 
     /* ===== End game ===== */
-    end() {
+    end() {        
         this.theme.updateTheme();
 
         gameBehaviorSwitch('END');
         cancelAnimationFrame(this.rAF);
+        document.querySelector('.game-start').textContent = 'START';
 
         this.canvas.clear(this.canvas.ctx);
-        this.controlStart.textContent = 'START';
 
         // End canvas screen
         for (let x = 0 ; x < this.config.canvasWidth; x += this.config.sizeCell) {
