@@ -1,4 +1,4 @@
-import { css, getRandomInt, sleep } from "./Utils.js";
+import { css, getRandomInt } from "./Utils.js";
 import Config, { GAME_BEHAVIOR, gameBehaviorSwitch } from "./Config.js";
 import Theme from "./Theme.js";
 import Audio from "./Audio.js";
@@ -116,7 +116,7 @@ export default class Snake {
         if (this.y < 0) {
             this.y = height;
         } else if (this.y >= height) {
-            this.y = -this.config.sizeCell;
+            this.y = -this.config.sizeCell / 2;
         }
     }
 
