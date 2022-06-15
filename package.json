@@ -17,16 +17,16 @@
     "deploy": "gh-pages -d dist"
   },
   "build": {
-  "appId": "com.electron.cybersanke",
-  "target": "nsis",
-  "icon": "dist/icon-256x256.png",
-  "directories": {
-    "output": "app"
-  },
-  "nsis": {
-    "allowToChangeInstallationDirectory": true,
-    "oneClick": false
-  }
+    "appId": "com.electron.cybersanke",
+    "target": "nsis",
+    "icon": "dist/icon-256x256.png",
+    "directories": {
+      "output": "app"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    }
   },
   "keywords": [
     "html",
@@ -51,5 +51,8 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
