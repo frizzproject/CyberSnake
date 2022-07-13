@@ -20,7 +20,7 @@ export default class Snake {
         this.dy = 0;                                    // Move direction y
 
         this.scoreSound = new Audio(this.theme.scoreSoundArr, false, 0.1);     // Sound score
-        this.loosSound = new Audio(this.theme.loosSoundArr, false, 0.1);       // Sound loos
+        this.loseSound = new Audio(this.theme.loseSoundArr, false, 0.1);       // Sound lose
         
         this.control(); 
         
@@ -56,7 +56,7 @@ export default class Snake {
         /* Border collisions */
         this.collisions(this.config.canvasWidth, this.config.canvasHeight);
 
-        /* Food collisions & Loos */
+        /* Food collisions & lose */
         this.tails.forEach((el, index) => { 
             // Food collision
             if ( el.x == eat.x && el.y == eat.y ) {
@@ -70,11 +70,12 @@ export default class Snake {
 
                 eat.random();
             }
-            // Loos
+            // lose
             for (let i = index + 1; i < this.tails.length; i++) {
                 if ( el.x == this.tails[i].x && el.y == this.tails[i].y ) {
-                    this.loss();
-                    this.loosSound.play();
+                    this.lose();
+                    this.loseSound.play();
+                    this.loseSound.play();
 
                     score.reset();
                     css(recordScore.scoreTable, {color: this.theme.recordColor});
@@ -108,20 +109,20 @@ export default class Snake {
     /* ===== Collisions sanke ===== */
     collisions(width, height) {
         if (this.x < 0) {
-            this.x = width;
+            this.x = width - this.config.sizeCell;
         } else if (this.x >= width) {
             this.x = -this.config.sizeCell;
         }
     
         if (this.y < 0) {
-            this.y = height;
+            this.y = height - this.config.sizeCell;
         } else if (this.y >= height) {
-            this.y = -this.config.sizeCell / 2;
+            this.y = -this.config.sizeCell;
         }
     }
 
-    /* ===== Loos ===== */
-    loss() {   
+    /* ===== lose ===== */
+    lose() {   
         gameBehaviorSwitch('END');
 
         this.randomSpawn();
