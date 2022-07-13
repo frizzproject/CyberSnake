@@ -34,7 +34,7 @@ export default class GameLoop {
             // IF SELECTED PAUSE GAME
             this.pause();
         } else if (GAME_BEHAVIOR === 'END') {
-            // IF LOOSE
+            // IF LOSE
             this.end();
         }
 
@@ -69,7 +69,7 @@ export default class GameLoop {
         for (let x = 0 ; x < this.config.canvasWidth; x += this.config.sizeCell) {
             for (let y = 0; y < this.config.canvasHeight; y+= this.config.sizeCell) {
                 this.canvas.ctx.beginPath();
-                this.canvas.ctx.fillStyle = this.theme.loosColor;
+                this.canvas.ctx.fillStyle = this.theme.loseColor;
                 this.canvas.ctx.arc(x + (this.config.sizeCell / 2 ), y + (this.config.sizeCell / 2 ), this.config.sizeEat, 0, 2 * Math.PI);
                 this.canvas.ctx.fill();
             }

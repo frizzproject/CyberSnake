@@ -12,7 +12,7 @@ export default class Theme {
         new URL('../audio/score.wav', import.meta.url).pathname, 
         new URL('../audio/score.ogg', import.meta.url).pathname
         ];
-        this.loosSoundArr = [				// Loos sound urls
+        this.loseSoundArr = [				// Lose sound urls
             new URL('../audio/loos.mp3', import.meta.url).pathname, 
             new URL('../audio/loos.wav', import.meta.url).pathname, 
             new URL('../audio/loos.ogg', import.meta.url).pathname
@@ -29,7 +29,7 @@ export default class Theme {
         this.snakeHeadColor = getCSSCustomProp('--snake-head-color');           // Color head snake
         this.snakeBodyColor = getCSSCustomProp('--snake-body-color');           // Color body snake
         this.eatColor = getCSSCustomProp('--eat-color');                        // Color eat for snake
-        this.loosColor = getCSSCustomProp('--loos-color');                      // Color loos screen
+        this.loseColor = getCSSCustomProp('--lose-color');                      // Color loos screen
     }
     
 }
